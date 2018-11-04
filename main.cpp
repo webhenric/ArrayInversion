@@ -2,12 +2,14 @@
 #include <fstream>
 #include <vector>
 #include <array>
+#include "ArrayInversionCount.h"
 
 using namespace std;
 
 int main(int argc, char* argv[]) {
     string file_name;
     vector<int> numbers;
+    ArrayInversionCount arrayInversionCount;
 
     ios_base::sync_with_stdio(false);
 
@@ -25,11 +27,12 @@ int main(int argc, char* argv[]) {
             ifs >> number;
             numbers.push_back(number);
         }
+        InversionContainer inversionContainer = arrayInversionCount.sort_and_count_inv(numbers);
+        cout << inversionContainer.getSize() << endl;
     } else {
         cerr << "Could not open file: " << file_name << endl;
         return 1;
     }
-
 
     return 0;
 }

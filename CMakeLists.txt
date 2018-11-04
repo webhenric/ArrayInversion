@@ -3,4 +3,4 @@ project(ArrayInversion)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ArrayInversion main.cpp)
+add_executable(ArrayInversion main.cpp ArrayInversionCount.h ArrayInversionCount.cpp)
