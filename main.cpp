@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
             numbers.push_back(number);
         }
         InversionContainer inversionContainer = arrayInversionCount.sort_and_count_inv(numbers);
-        cout << inversionContainer.getSize() << endl;
+        cout << inversionContainer.getNumOfInversions() << endl;
     } else {
         cerr << "Could not open file: " << file_name << endl;
         return 1;
